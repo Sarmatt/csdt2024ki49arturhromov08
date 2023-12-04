@@ -1,0 +1,90 @@
+\doxysection{Arduino\+Connector Class Reference}
+\hypertarget{class_arduino_connector}{}\label{class_arduino_connector}\index{ArduinoConnector@{ArduinoConnector}}
+Inheritance diagram for Arduino\+Connector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_arduino_connector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_arduino_connector_a63298f6af9b7bbd605f0a9a06a5a9f92}{Assign\+Message}} (string msg)
+\begin{DoxyCompactList}\small\item\em The method which sends json data to arduino. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_arduino_connector_afab66e42002838f6baaf0939cbab9dc6}{Data\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em The method which connects Unity code to arduino. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_arduino_connector_a63298f6af9b7bbd605f0a9a06a5a9f92}\label{class_arduino_connector_a63298f6af9b7bbd605f0a9a06a5a9f92} 
+\index{ArduinoConnector@{ArduinoConnector}!AssignMessage@{AssignMessage}}
+\index{AssignMessage@{AssignMessage}!ArduinoConnector@{ArduinoConnector}}
+\doxysubsubsection{\texorpdfstring{AssignMessage()}{AssignMessage()}}
+{\footnotesize\ttfamily void Arduino\+Connector.\+Assign\+Message (\begin{DoxyParamCaption}\item[{string}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The method which sends json data to arduino. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to send to arduino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arduino_connector_a63298f6af9b7bbd605f0a9a06a5a9f92}{AssignMessage}}(\textcolor{keywordtype}{string}\ msg)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \textcolor{keywordtype}{string}\ jsonData\ =\ \textcolor{stringliteral}{"{}\{\(\backslash\)"{}key1\(\backslash\)"{}:\(\backslash\)"{}0\(\backslash\)"{}\}\(\backslash\)n"{}};}
+\DoxyCodeLine{\ \_outgoingMsg\ =\ msg;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\Hypertarget{class_arduino_connector_afab66e42002838f6baaf0939cbab9dc6}\label{class_arduino_connector_afab66e42002838f6baaf0939cbab9dc6} 
+\index{ArduinoConnector@{ArduinoConnector}!DataThread@{DataThread}}
+\index{DataThread@{DataThread}!ArduinoConnector@{ArduinoConnector}}
+\doxysubsubsection{\texorpdfstring{DataThread()}{DataThread()}}
+{\footnotesize\ttfamily static void Arduino\+Connector.\+Data\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The method which connects Unity code to arduino. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sp} & Serial Port 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arduino_connector_afab66e42002838f6baaf0939cbab9dc6}{DataThread}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \_sp\ =\ \textcolor{keyword}{new}\ SerialPort(\textcolor{stringliteral}{"{}COM6"{}},\ 9600);}
+\DoxyCodeLine{\ \ \ \ \_sp.Open();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (\_outgoingMsg\ !=\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_sp.Write(\_outgoingMsg);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_outgoingMsg\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \_incomingMsg\ =\ \_sp.ReadExisting();}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\_incomingMsg);}
+\DoxyCodeLine{\ \ \ \ Thread.Sleep(50);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Arduino\+Connector.\+cs\end{DoxyCompactItemize}
