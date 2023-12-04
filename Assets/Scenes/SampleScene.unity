@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 1.0s
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b33071e3dc51b49a314ee0b2aa75ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _arduinoConnector: {fileID: 1753339986}
+  _arduinoConnector: {fileID: 1753339983}
 --- !u!1 &1243316680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1179,7 @@ GameObject:
   - component: {fileID: 1348601303}
   - component: {fileID: 1348601302}
   - component: {fileID: 1348601301}
+  - component: {fileID: 1348601300}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -1206,6 +1207,19 @@ RectTransform:
   m_AnchoredPosition: {x: -23, y: -287}
   m_SizeDelta: {x: 594.4115, y: 189.0869}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1348601300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348601298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b33071e3dc51b49a314ee0b2aa75ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _arduinoConnector: {fileID: 1753339983}
 --- !u!114 &1348601301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,18 +1280,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1753339985}
-        m_TargetAssemblyTypeName: Main.TimeTextDisplayer, Main
-        m_MethodName: ResetText
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1639,7 +1641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1753339984}
-  - component: {fileID: 1753339986}
+  - component: {fileID: 1753339983}
   - component: {fileID: 1753339985}
   m_Layer: 0
   m_Name: Arduino
@@ -1648,6 +1650,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1753339983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753339982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bffbb71cf456314695734db30c23b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeTextDisplayer: {fileID: 1753339985}
 --- !u!4 &1753339984
 Transform:
   m_ObjectHideFlags: 0
@@ -1676,20 +1691,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 269664124}
---- !u!114 &1753339986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753339982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bffbb71cf456314695734db30c23b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _displayingText: {fileID: 269664124}
-  _timeTextDisplayer: {fileID: 1753339985}
 --- !u!1 &1936238084
 GameObject:
   m_ObjectHideFlags: 0
