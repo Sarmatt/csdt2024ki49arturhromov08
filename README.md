@@ -24,7 +24,6 @@ Example:
 
 ```
 string jsonData = "{\"key1\":\"0\"}\n";
-
 ```
 
 ### Hardware
