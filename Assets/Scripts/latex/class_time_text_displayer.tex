@@ -1,0 +1,47 @@
+\doxysection{Time\+Text\+Displayer Class Reference}
+\hypertarget{class_time_text_displayer}{}\label{class_time_text_displayer}\index{TimeTextDisplayer@{TimeTextDisplayer}}
+Inheritance diagram for Time\+Text\+Displayer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_time_text_displayer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_time_text_displayer_a5ce92db63c39e4646049ee86ec6c4077}{Display\+Time}} (int time)
+\begin{DoxyCompactList}\small\item\em The method which sends json data to arduino when Clicking on mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_time_text_displayer_a5ce92db63c39e4646049ee86ec6c4077}\label{class_time_text_displayer_a5ce92db63c39e4646049ee86ec6c4077} 
+\index{TimeTextDisplayer@{TimeTextDisplayer}!DisplayTime@{DisplayTime}}
+\index{DisplayTime@{DisplayTime}!TimeTextDisplayer@{TimeTextDisplayer}}
+\doxysubsubsection{\texorpdfstring{DisplayTime()}{DisplayTime()}}
+{\footnotesize\ttfamily void Time\+Text\+Displayer.\+Display\+Time (\begin{DoxyParamCaption}\item[{int}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The method which sends json data to arduino when Clicking on mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The message catched from arduino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_text_displayer_a5ce92db63c39e4646049ee86ec6c4077}{DisplayTime}}(\textcolor{keywordtype}{int}\ time\ \textcolor{comment}{/*\ miliseconds\ */})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \_text.text\ =\ time\ /\ 1000\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ (time\ \%\ 1000)\ /\ 10\ +\ \textcolor{stringliteral}{"{}:"{}}\ +\ (time\ \%\ 1000)\ \%\ 10;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Time\+Text\+Displayer.\+cs\end{DoxyCompactItemize}
