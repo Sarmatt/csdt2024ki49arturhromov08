@@ -18,6 +18,14 @@ Project details
 ### Software
 The frontend part of application will be written using Console Application. Programing language - C++
 
+### Using Json
+Json is sending by code 
+Example: 
+
+```
+string jsonData = "{\"key1\":\"0\"}\n";
+```
+
 ### Hardware
 Programing language - C++
 Hardvare - Arduino UNO
